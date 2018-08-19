@@ -1,16 +1,16 @@
-# ants
-This program takes a graph (rooms with un-directed connections) and computes the most efficient way to move N ants from source node to sink node, outputs an animated movement of the ants
+# Ants Pathfinding
+This program implements flow charts and BFS to find the shortest path for a group of ants to travel from one node to another.
 
-This project was done in collaboration with Liam Dehaudt at 42.
+This project was done in collaboration with Conan Wu (conanwu777) at 42, check out her stuff.
 
 ## Compiling and running
 Run `make`. An executable will compile. Currently only tested on OS X.
 
-Run with `./ants "Filename"`.
+Run with `./ants "map"`.
 A collection of sample ant farms is included in `farms/` folder.
 
 ## Algorithm
-We re-formulated the problem into a mex-flow problem on a derived directed graph (with more vertices)to apply the Ford–Fulkerson algorithm. Project the resulting parallel paths to the origional network and resolve overlaps. Then we queue the ants in the resulting set of disjoint paths depending on the length of each path. The result garentees optimum solution as long as the number of ants is greater than the sum of lengths of paths from Ford–Fulkerson.
+We re-formulated the problem into a max-flow problem on a derived directed graph (with more vertices)to apply the Ford–Fulkerson algorithm. We project the resulting parallel paths to the origional network and resolve overlaps. Then we queue the ants in the resulting set of disjoint paths depending on the length of each path. The result garentees optimum solution as long as the number of ants is greater than the sum of lengths of paths from Ford–Fulkerson.
 
 ## Steps
 * Store the rooms and connections into an undirected graph (Network)
