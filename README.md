@@ -3,6 +3,8 @@ This program implements flow charts and BFS to find the shortest path for a grou
 
 This project was done in collaboration with Conan Wu (conanwu777) at 42, check out her stuff.
 
+antjoy ^-^ 
+
 ## Compiling and running
 Run `make`. An executable will compile. Currently only tested on OS X.
 
